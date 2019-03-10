@@ -47,10 +47,6 @@ static long unlocked_ioctl(struct file *filp, unsigned int cmd, unsigned long ar
   return 0;
 }
 
-
-
-
-
 static struct file_operations fops = {
   .read = device_read,
   .write = device_write,
@@ -58,7 +54,6 @@ static struct file_operations fops = {
   .release = device_release,
   .unlocked_ioctl = unlocked_ioctl
 };
-
 
 static int device_open(struct inode *inode, struct file *filp)
 {
